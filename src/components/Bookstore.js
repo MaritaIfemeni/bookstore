@@ -6,8 +6,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
-import "./ag-grid-community/dist/styles/ag-grid.min.css";
-import "./ag-grid-community/dist/styles/ag-theme-material.css";
+import "ag-grid-community/dist/styles/ag-grid.min.css";
+import "ag-grid-community/dist/styles/ag-theme-material.min.css";
 import { pink } from "@mui/material/colors";
 import AddBook from "./AddBook";
 
