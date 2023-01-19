@@ -16,7 +16,7 @@ function Bookstore() {
 
   useEffect(() => {
     fetchItems();
-  }, );
+  });
 
   const fetchItems = () => {
     fetch("https://bookstore-1a704-default-rtdb.firebaseio.com/books/.json")
@@ -34,6 +34,16 @@ function Bookstore() {
   };
 
   const addBook = (newBook) => {
+    //if inputs are empty, do not add book
+    if (
+      newBook.title === "" ||
+      newBook.author === "" ||
+      newBook.year === "" ||
+      newBook.isbn === "" ||
+      newBook.price === ""
+    ) {
+      return;
+    }
     fetch("https://bookstore-1a704-default-rtdb.firebaseio.com/books/.json", {
       method: "POST",
       body: JSON.stringify(newBook),
