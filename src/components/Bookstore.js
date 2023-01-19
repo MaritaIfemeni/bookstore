@@ -77,6 +77,7 @@ function Bookstore() {
   return (
     <div className="App">
       <br />
+      /* Todo: change alaingment and make Appbar responsive */
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h5" noWrap>
@@ -91,6 +92,7 @@ function Bookstore() {
         className="ag-theme-material"
         style={{ height: 400, width: 1200, margin: "auto" }}
       >
+        /* Todo: Make table resonsive */
         <AgGridReact rowData={books}>
           <AgGridColumn sortable={true} filter={true} field="author" />
           <AgGridColumn sortable={true} filter={true} field="isbn" />
