@@ -19,7 +19,7 @@ function Bookstore() {
   });
 
   const fetchItems = () => {
-    fetch("https://bookstore-1a704-default-rtdb.firebaseio.com/books/.json")
+    fetch("https://newbookstore-402d5-default-rtdb.europe-west1.firebasedatabase.app/")
       .then((response) => response.json())
       .then((data) => addKeys(data))
       .catch((err) => console.error(err));
@@ -44,7 +44,7 @@ function Bookstore() {
     ) {
       return;
     }
-    fetch("https://bookstore-1a704-default-rtdb.firebaseio.com/books/.json", {
+    fetch("https://newbookstore-402d5-default-rtdb.europe-west1.firebasedatabase.app/books/.json", {
       method: "POST",
       body: JSON.stringify(newBook),
     })
@@ -54,7 +54,7 @@ function Bookstore() {
 
   const deleteBook = (id) => {
     fetch(
-      `https://bookstore-1a704-default-rtdb.firebaseio.com/books/${id}.json`,
+      `https://newbookstore-402d5-default-rtdb.europe-west1.firebasedatabase.app/books/${id}.json`,
       {
         method: "DELETE",
       }
